@@ -1,10 +1,18 @@
 import "./App.css";
-import Counter from "./components/Counter/Counter";
+import Rating from "./components/Rating/Rating";
 
 function App() {
+  const handleRatingChange = (value) => {
+    console.log("current value", value);
+  };
   return (
     <>
-      <Counter color="#000" />
+      <Rating
+        length={5}
+        value={3}
+        readOnly={false}
+        onRatingChange={handleRatingChange}
+      />
     </>
   );
 }
